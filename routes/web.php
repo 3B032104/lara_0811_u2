@@ -43,3 +43,15 @@ Route::get('hello/{name}', function($name) {
 Route::get('hello2/{name?}', function($name = 'Everybody') {
     return 'Hello, '.$name;
 })->name('hello.index');
+
+// Route dashboard return string 'dashboard'
+Route::get('dashboard', function() {
+    return 'dashboard';
+});
+
+// Route dashboard the guoup prefix is admin ,return string 'dashboard'
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('dashboard', function() {
+        return 'admin dashboard';
+    });
+});
