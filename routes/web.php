@@ -37,3 +37,8 @@ Route::get('r2', function() {
 Route::get('hello/{name}', function($name) {
     return 'Hello, '.$name;
 });
+
+// Route get val return val string (Non-essential val ,if val is null val = Everybody)
+Route::get('hello2/{name?}', function($name = 'Everybody') {
+    return 'Hello, '.$name;
+});
