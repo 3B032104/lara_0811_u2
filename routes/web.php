@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route retrun string 'welcome'
+Route::get('/', function () {
+    return 'welcome';
+});
