@@ -127,6 +127,9 @@
                                 </svg>
                                 Sponsor
                             </a>
+                            <a href="{{ route('hello.index') }}">hello</a>
+                            <a href="{{ route('hello.index', ['name' => 'tom']) }}">hello2</a>
+                            <a href="/hello/tom">hello3</a>
                         </div>
                     </div>
 

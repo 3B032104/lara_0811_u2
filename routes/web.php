@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*
 // Route return string 'welcome'
 Route::get('/', function () {
     return 'welcome';
 });
-
+*/
 // Route redirect to route r2
 Route::get('r1', function() {
     return redirect('r2');
@@ -39,6 +39,7 @@ Route::get('hello/{name}', function($name) {
 });
 
 // Route get val return val string (Non-essential val ,if val is null val = Everybody)
+// The Route name is hello.index
 Route::get('hello2/{name?}', function($name = 'Everybody') {
     return 'Hello, '.$name;
-});
+})->name('hello.index');
