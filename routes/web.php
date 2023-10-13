@@ -13,12 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route retrun view welcome
+// Route return view welcome
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route retrun string 'welcome'
+// Route return string 'welcome'
 Route::get('/', function () {
     return 'welcome';
+});
+
+// Route redirect to route r2
+Route::get('r1', function() {
+    return redirect('r2');
+});
+
+// Route return view welcome
+Route::get('r2', function() {
+    return view('welcome');
 });
